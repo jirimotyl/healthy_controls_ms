@@ -170,10 +170,10 @@ hcr_tab_01a <- tribble(
 )
 write_excel_csv(hcr_tab_01a, "final_data/hcr_tab_01a.csv")
 
-###basic demographics - MRI+PSY complete
+###basic demographics - PSY complete
 hcr_tab_01b <- tribble(
   ~variable, ~M0, ~M12, ~M36, ~M48,
-  "MRI+PSY complete (N)", fn_demographics_n(hcr_data_psy_grouped$m0_arm_1), fn_demographics_n(hcr_data_psy_grouped$m12_arm_1), fn_demographics_n(hcr_data_psy_grouped$m36_arm_1), fn_demographics_n(hcr_data_psy_grouped$m48_arm_1),
+  "PSY complete (N)", fn_demographics_n(hcr_data_psy_grouped$m0_arm_1), fn_demographics_n(hcr_data_psy_grouped$m12_arm_1), fn_demographics_n(hcr_data_psy_grouped$m36_arm_1), fn_demographics_n(hcr_data_psy_grouped$m48_arm_1),
   "Age - MRI", fn_demographics_means("age_mri", hcr_data_psy_grouped$m0_arm_1), fn_demographics_means("age_mri", hcr_data_psy_grouped$m12_arm_1), fn_demographics_means("age_mri", hcr_data_psy_grouped$m36_arm_1), fn_demographics_means("age_mri", hcr_data_psy_grouped$m48_arm_1),
   "Age - MS Center", fn_demographics_means("age_psy", hcr_data_psy_grouped$m0_arm_1), fn_demographics_means("age_psy", hcr_data_psy_grouped$m12_arm_1), fn_demographics_means("age_psy", hcr_data_psy_grouped$m36_arm_1), fn_demographics_means("age_psy", hcr_data_psy_grouped$m48_arm_1),
   "N (Females/Males)", function_sex_count(hcr_data_psy, "m0_arm_1"), function_sex_count(hcr_data_psy, "m12_arm_1"), function_sex_count(hcr_data_psy, "m36_arm_1"), function_sex_count(hcr_data_psy, "m48_arm_1"),
